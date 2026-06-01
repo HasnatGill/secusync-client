@@ -9,7 +9,7 @@ const ITEMS = [
     },
     {
         quote:
-            "Clock-ins, welfare checks and patrol tracking in one app — our supervisors finally trust the data.",
+            "Clock-ins, welfare checks and patrol tracking in one app our supervisors finally trust the data.",
         name: "Site Supervisor",
         role: "Commercial Estate",
     },

@@ -50,7 +50,7 @@ export default function About() {
                         and synced across the field and the office.
                     </p>
                     <p style={{ color: "#5A6B7B", lineHeight: 1.7, fontSize: "1.05rem" }}>
-                        Built for reliability — live GPS tracking, geofenced checkpoints, welfare
+                        Built for reliability live GPS tracking, geofenced checkpoints, welfare
                         check-ins and instant SOS escalation, all in one platform.
                     </p>
 

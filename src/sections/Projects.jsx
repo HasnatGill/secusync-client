@@ -5,7 +5,7 @@ const PROJECTS = [
     {
         title: "Secusync Platform",
         tag: "Web + Mobile",
-        desc: "Guard management suite — live tracking, shift ops, welfare checks & incident reporting across web and React Native.",
+        desc: "Guard management suite live tracking, shift ops, welfare checks & incident reporting across web and React Native.",
         icon: "🛡️",
     },
     {
