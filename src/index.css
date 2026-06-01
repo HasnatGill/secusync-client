@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0E2A47;
+  --color-primary-dark: #0A1F36;
+  --color-primary-light: #1B3B5F;
+  --color-accent: #1FC8E3;
+  --color-accent-dark: #0FA9C4;
+  --color-secondary: #0077B6;
+  --color-lightcyan: #E9F6FB;
+  --color-bordersoft: #D6E2EC;
+}
+
+/* Distinctive display + body font (Secusync feel) */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+/* Lenis handles smooth scroll */
+body {
+  margin: 0;
+  font-family: "Manrope", system-ui, sans-serif;
+  background: #06121F;
+  color: #0E2A47;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Sora", system-ui, sans-serif;
+}
+
+/* Lenis required styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
