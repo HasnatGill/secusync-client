@@ -148,7 +148,7 @@ export default function Hero() {
                         color: "rgba(233,246,251,0.75)",
                     }}
                 >
-                    Real-time guard management, live tracking, and incident reporting —
+                    Real-time guard management, live tracking, and incident reporting
                     engineered into one seamless platform.
                 </motion.p>
 
