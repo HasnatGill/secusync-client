@@ -1,52 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-@theme {
+:root {
+  /* ===== Brand Colors (SecuSync) ===== */
   --color-primary: #0E2A47;
-  --color-primary-dark: #0A1F36;
-  --color-primary-light: #1B3B5F;
+  /* deep navy */
+  --color-primaryLight: #1B3B5F;
+  /* lighter navy */
+  --color-darkPrimary: #0A1F36;
+  /* darker navy / gradient bottom */
   --color-accent: #1FC8E3;
-  --color-accent-dark: #0FA9C4;
+  /* electric cyan */
+  --color-accentDark: #0FA9C4;
+  /* deeper cyan */
+
+  --color-caption: #5A6B7B;
+  /* cool grey text */
   --color-secondary: #0077B6;
+  --color-cyan: #00B4D8;
+  --color-skyblue: #90E0EF;
   --color-lightcyan: #E9F6FB;
-  --color-bordersoft: #D6E2EC;
+  /* soft page background */
+  --color-navy: #03045E;
+
+  --color-danger: #E5484D;
+  --color-warning: #F5A524;
+  --color-success: #2ECC71;
+
+  /* ===== Shadows / Elevation (3D touch) ===== */
+  --shadow-border: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  --shadow-box: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --shadow-lgBox: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --shadow-card3d: 0 10px 30px -10px rgba(14, 42, 71, 0.25), 0 30px 60px -30px rgba(14, 42, 71, 0.30);
+  --shadow-glow: 0 8px 24px -6px rgba(31, 200, 227, 0.55);
+
+  /* ===== Fonts ===== */
+  --font-funnel: "Funnel Display", sans-serif;
 }
 
-/* Distinctive display + body font (Secusync feel) */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600&display=swap');
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primaryLight);
+  --color-primary-dark: var(--color-darkPrimary);
+  --color-accent: var(--color-accent);
+  --color-accent-dark: var(--color-accentDark);
+  --color-caption: var(--color-caption);
+  --color-secondary: var(--color-secondary);
+  --color-cyan-brand: var(--color-cyan);
+  --color-skyblue: var(--color-skyblue);
+  --color-lightcyan: var(--color-lightcyan);
+  --color-navy: var(--color-navy);
+
+  --color-danger: var(--color-danger);
+  --color-warning: var(--color-warning);
+  --color-success: var(--color-success);
+
+  --shadow-card3d: var(--shadow-card3d);
+  --shadow-glow: var(--shadow-glow);
+  --shadow-border: var(--shadow-border);
+  --shadow-box: var(--shadow-box);
+  --shadow-lg-box: var(--shadow-lgBox);
+}
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
-/* Lenis handles smooth scroll */
 body {
   margin: 0;
   font-family: "Manrope", system-ui, sans-serif;
-  background: #06121F;
-  color: #0E2A47;
+  background-color: #FFFFFF;
+  color: var(--color-caption);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1,
 h2,
-h3 {
-  font-family: "Sora", system-ui, sans-serif;
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Funnel Display", system-ui, sans-serif;
+  color: var(--color-darkPrimary);
+  font-weight: 700;
 }
 
-/* Lenis required styles */
-html.lenis,
-html.lenis body {
-  height: auto;
+/* Standard animation helper utilities */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
