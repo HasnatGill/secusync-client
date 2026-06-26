@@ -68,32 +68,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero Right Composition */}
             <div className="lg:col-span-6 relative flex justify-center">
-              {/* Decorative brand block frame behind image */}
-              <div className="absolute -z-10 -bottom-6 -left-6 w-[80%] h-[90%] rounded-3xl bg-[var(--color-primaryLight)]/10 rotate-3"></div>
-
-              {/* Main dashboard placeholder mockup */}
-              <div className="w-full max-w-lg rounded-2xl bg-white shadow-2xl border border-[var(--color-lightcyan)] overflow-hidden relative">
-                <PlaceholderImage type="dashboard" height="h-80" />
-
-                {/* Floating mini stats badge on top-right */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-xs p-3.5 rounded-2xl shadow-xl border border-[var(--color-lightcyan)] flex items-center gap-3 animate-bounce duration-[4000ms]">
-                  <div className="h-10 w-10 rounded-xl bg-[var(--color-accent)] text-[var(--color-primary)] flex items-center justify-center">
-                    <FiStar className="h-5 w-5" />
-                  </div>
-                  <div className="text-left">
-                    <p className="text-[10px] font-bold text-gray-400 uppercase leading-none">Response SLA</p>
-                    <p className="text-sm font-extrabold text-[var(--color-primary)] mt-1">99.8% Perfect</p>
-                  </div>
-                </div>
-
-                {/* Floating active icon strip at bottom-left */}
-                <div className="absolute -bottom-2 -left-2 bg-[var(--color-darkPrimary)] p-2.5 rounded-xl shadow-xl flex items-center gap-2">
-                  <span className="flex h-2.5 w-2.5 rounded-full bg-[var(--color-accent)] animate-ping"></span>
-                  <span className="text-[9px] font-bold text-white uppercase tracking-widest">Active Dispatch Online</span>
-                </div>
-              </div>
+              <img className="w-full max-w-xxl" src="https://res.cloudinary.com/dkulkn9be/image/upload/v1782468960/secusync1.jpg-removebg-preview_kwr78y.png" alt="" />
             </div>
 
           </div>
