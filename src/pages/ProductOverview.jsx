@@ -10,16 +10,16 @@ import { FiCheck, FiArrowRight } from "react-icons/fi";
 
 export default function ProductOverview() {
   const { hero, modules } = productOverview;
-  
+
   // Recommend first 3 blog posts
   const recommendedArticles = blog.articles.slice(0, 3);
 
   return (
     <div className="relative overflow-hidden bg-white">
-      
+
       {/* Hero */}
       <section className="relative pt-12 pb-20 md:pt-16 md:pb-24 bg-[var(--color-lightcyan)]/30 border-b border-[var(--color-lightcyan)]/80">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center space-y-6 max-w-4xl">
+        <div className="mx-auto max-w-[75%] px-6 lg:px-8 text-center space-y-6 max-w-4xl">
           <span className="inline-block rounded-full bg-[var(--color-lightcyan)] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] border border-[var(--color-accent)]/20">
             {hero.badge}
           </span>
@@ -39,17 +39,16 @@ export default function ProductOverview() {
 
       {/* Stacked Alternating Modules */}
       <section className="py-20 md:py-28 space-y-24 md:space-y-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
           {modules.map((mod, index) => {
             const isEven = index % 2 === 0;
             return (
-              <div 
-                key={mod.id} 
-                className={`grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center py-12 md:py-16 border-b border-[var(--color-lightcyan)]/30 last:border-b-0 ${
-                  isEven ? "" : "lg:flex-row-reverse"
-                }`}
+              <div
+                key={mod.id}
+                className={`grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center py-12 md:py-16 border-b border-[var(--color-lightcyan)]/30 last:border-b-0 ${isEven ? "" : "lg:flex-row-reverse"
+                  }`}
               >
-                
+
                 {/* Visual side */}
                 <div className={`lg:col-span-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
                   <div className="rounded-2xl bg-white shadow-xl border border-[var(--color-lightcyan)]/30 p-4">
@@ -96,8 +95,8 @@ export default function ProductOverview() {
 
       {/* Testimonials */}
       <section className="py-16 bg-slate-50/50 border-y border-slate-100">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <SectionHeader 
+        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+          <SectionHeader
             eyebrow="Proven Success"
             title="What Our Clients Say About Our Modules"
             description="Our modular platform allows companies of all sizes to integrate their operations seamlessly."
@@ -110,8 +109,8 @@ export default function ProductOverview() {
 
       {/* Recommended Articles */}
       <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <SectionHeader 
+        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+          <SectionHeader
             eyebrow="Industry Resources"
             title="Read More from Our Experts"
             description="Explore our operations guides, tech tips, and industry trends posts."
@@ -120,7 +119,7 @@ export default function ProductOverview() {
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {recommendedArticles.map((article) => (
-              <ArticleCard 
+              <ArticleCard
                 key={article.id}
                 type="blog"
                 id={article.id}
@@ -136,7 +135,7 @@ export default function ProductOverview() {
       </section>
 
       {/* CTA Banner */}
-      <section className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16">
+      <section className="mx-auto max-w-[75%] px-6 lg:px-8 py-12 md:py-16">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] px-8 py-12 text-center shadow-[var(--shadow-card3d)] max-w-5xl mx-auto border border-[var(--color-primaryLight)]">
           <div className="relative z-10 max-w-2xl mx-auto space-y-6">
             <h2 className="text-3xl font-extrabold text-white leading-tight">

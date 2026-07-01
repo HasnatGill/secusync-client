@@ -2,7 +2,7 @@
 export const homeContent = {
   hero: {
     badge: "Next-Gen Private Security Software",
-    title: "The Unified Software Platform for Private Security Operations",
+    title: "All-in-One Security Guard Management Software",
     subtitle: "Ditch the paperwork. Streamline your guard tours, automate alarm dispatching, manage contracts, and delight clients with transparent, real-time reporting.",
     ctaPrimary: "Request Demo",
     ctaSecondary: "Watch Demo Video",

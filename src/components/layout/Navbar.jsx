@@ -94,7 +94,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[var(--color-lightcyan)] bg-white shadow-xs backdrop-blur-xs">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-[85%] items-center justify-between px-6 lg:px-8">
 
         {/* Brand Logo */}
         <div className="flex items-center gap-2">
@@ -138,13 +138,13 @@ export default function Navbar() {
                           key={item.name}
                           to={item.href}
                           className={`flex items-start gap-3.5 rounded-xl p-3 text-left transition-colors ${item.isHighlight
-                              ? "bg-[var(--color-lightcyan)] hover:bg-[var(--color-lightcyan)]/80 text-[var(--color-primary)]"
-                              : "hover:bg-slate-50"
+                            ? "bg-[var(--color-lightcyan)] hover:bg-[var(--color-lightcyan)]/80 text-[var(--color-primary)]"
+                            : "hover:bg-slate-50"
                             }`}
                         >
                           <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${item.isHighlight
-                              ? "bg-[var(--color-primary)] text-[var(--color-accent)]"
-                              : "bg-[var(--color-lightcyan)] text-[var(--color-primary)]"
+                            ? "bg-[var(--color-primary)] text-[var(--color-accent)]"
+                            : "bg-[var(--color-lightcyan)] text-[var(--color-primary)]"
                             }`}>
                             <Icon className="h-5 w-5" />
                           </span>

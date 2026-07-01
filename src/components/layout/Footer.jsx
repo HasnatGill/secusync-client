@@ -6,7 +6,7 @@ import whiteLogo from "../../assets/whiteLogo.png";
 export default function Footer() {
   return (
     <footer className="bg-[var(--color-darkPrimary)] text-slate-300 border-t border-[var(--color-primaryLight)] pt-16 pb-8">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-[85%] px-6 lg:px-8">
 
         {/* Main Columns Grid */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-6">

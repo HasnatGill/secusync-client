@@ -48,10 +48,10 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="relative overflow-hidden bg-white">
-      
+
       {/* 1. HERO HEADER */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 bg-gradient-to-b from-[var(--color-lightcyan)]/30 via-white to-white border-b border-[var(--color-lightcyan)]/80">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center space-y-4 max-w-3xl">
+        <div className="mx-auto max-w-[75%] px-6 lg:px-8 text-center space-y-4 max-w-3xl">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-lightcyan)] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] border border-[var(--color-accent)]/20">
             <FiLock className="h-3.5 w-3.5 text-[var(--color-accent)]" />
             Security & Trust
@@ -67,9 +67,9 @@ export default function PrivacyPolicy() {
 
       {/* 2. CONTENT SECTION WITH SIDEBAR */}
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
+
             {/* Left Sidebar Menu (Sticky) */}
             <aside className="lg:col-span-4 hidden lg:block">
               <div className="sticky top-28 space-y-2.5 p-6 rounded-2xl bg-slate-50/70 border border-slate-100/80 shadow-xs">
@@ -82,11 +82,10 @@ export default function PrivacyPolicy() {
                     <button
                       key={sec.id}
                       onClick={() => scrollTo(sec.id)}
-                      className={`w-full flex items-center justify-between text-left px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                        activeSection === sec.id
-                          ? "bg-[var(--color-primary)] text-white shadow-md shadow-[var(--color-primary)]/10"
-                          : "text-[var(--color-caption)] hover:bg-slate-100 hover:text-[var(--color-primary)]"
-                      }`}
+                      className={`w-full flex items-center justify-between text-left px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${activeSection === sec.id
+                        ? "bg-[var(--color-primary)] text-white shadow-md shadow-[var(--color-primary)]/10"
+                        : "text-[var(--color-caption)] hover:bg-slate-100 hover:text-[var(--color-primary)]"
+                        }`}
                     >
                       <span>{sec.title}</span>
                       <FiChevronRight className={`h-3 w-3 opacity-60 transition-transform ${activeSection === sec.id ? "translate-x-0.5" : ""}`} />
@@ -98,7 +97,7 @@ export default function PrivacyPolicy() {
 
             {/* Right Detailed Contents */}
             <div className="lg:col-span-8 space-y-12 text-left text-sm sm:text-base text-[var(--color-caption)] leading-relaxed">
-              
+
               {/* Introduction */}
               <article id="intro" className="space-y-4 scroll-mt-28">
                 <h2 className="text-xl font-extrabold text-[var(--color-darkPrimary)] sm:text-2xl flex items-center gap-2">
