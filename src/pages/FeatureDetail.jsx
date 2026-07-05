@@ -58,7 +58,7 @@ export default function FeatureDetail() {
 
             {/* Right Column Visual */}
             <div className="lg:col-span-6 relative flex justify-center">
-              <img src="https://res.cloudinary.com/dkulkn9be/image/upload/v1783242572/Guard_Tour_Checkpoint_System_with_logo_pjwofo.png" alt="Hero Image" />
+              <img src="https://res.cloudinary.com/dkulkn9be/image/upload/v1783242571/Log_Incidents_with_Photo_Video_Proof_3_lfruzn.png" alt="Hero Image" />
             </div>
 
           </div>

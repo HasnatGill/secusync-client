@@ -538,19 +538,19 @@ export const featurePages = {
         eyebrow: "Proof of Presence",
         title: "Make Sure Every Checkpoint Is Visited",
         description: "Stop fake or missed patrols. Guards scan NFC tags, RFID tokens, or QR codes at each checkpoint. The system records the guard name, time, and location. If a patrol is missed or late, supervisors get an alert right away.",
-        placeholderType: "mobile"
+        placeholderType: "checkPoint"
       },
       {
         eyebrow: "Incident Reports",
         title: "Report Incidents with Photos and Videos",
         description: "When a guard sees a problem, like an open gate, water leak, or broken lock, they can report it immediately through the app. They can add photos, videos, text notes, voice notes, and severity level. The system then creates a clean PDF report and sends it to the client automatically.",
-        placeholderType: "checklist"
+        placeholderType: "incidentLog"
       },
       {
         eyebrow: "Manager Dashboard",
         title: "Control All Field Work from One Dashboard",
         description: "Replace spreadsheets with one simple dashboard. You can see active shifts, checkpoint progress, guard locations, and past patrol logs in one place. Missed checkpoints are highlighted so managers can take action quickly.",
-        placeholderType: "dashboard"
+        placeholderType: "penal"
       }
     ],
     allFeatures: [
