@@ -1,11 +1,11 @@
 import { homeContent } from "../content/homeContent";
-import { caseStudies } from "../content/caseStudies";
+// import { caseStudies } from "../content/caseStudies";
 import Button from "../components/common/Button";
 import SectionHeader from "../components/common/SectionHeader";
 import FeatureCard from "../components/common/FeatureCard";
 import TestimonialSlider from "../components/common/TestimonialSlider";
 import FaqAccordion from "../components/common/FaqAccordion";
-import ArticleCard from "../components/common/ArticleCard";
+// import ArticleCard from "../components/common/ArticleCard";
 import LogoCloud from "../components/common/LogoCloud";
 import PlaceholderImage from "../components/common/PlaceholderImage";
 import { FiCheck, FiArrowRight, FiSmartphone, FiShield, FiStar } from "react-icons/fi";
@@ -14,24 +14,24 @@ export default function Home() {
   const { hero, valueCards, logoCloud, showcases, benefitsSecondary, mobileApp, testimonials, faqs } = homeContent;
 
   // Grab first 3 case studies for preview
-  const featuredCases = caseStudies.list.slice(0, 3);
+  // const featuredCases = caseStudies.list.slice(0, 3);
 
   return (
     <div className="relative overflow-hidden bg-white">
 
       {/* 1. HERO SECTION */}
       <section className="relative pt-10 pb-20 md:pt-16 md:pb-28 bg-gradient-to-b from-[var(--color-lightcyan)]/30 via-white to-white">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-0! lg:grid-cols-12 lg:items-center">
 
             {/* Hero Left Content */}
-            <div className="lg:col-span-6 space-y-6 text-left animate-fade-in">
+            <div className="lg:col-span-5 space-y-2 text-left animate-fade-in">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-lightcyan)] px-3 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-primary)]">
                 <FiShield className="h-3.5 w-3.5 text-[var(--color-accent)]" />
                 {hero.badge}
               </span>
 
-              <h1 className="text-4xl font-extrabold tracking-tight text-[var(--color-darkPrimary)] sm:text-5xl md:text-5xl leading-tight">
+              <h1 className="text-4xl font-extrabold tracking-tight text-[var(--color-darkPrimary)] sm:text-5xl md:text-4xl leading-tight">
                 {hero.title.split(" ").map((word, index) =>
                   word === "Management" || word === "Guard" || word === "Security" ? (
                     <span key={index} className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-accent)] font-extrabold">{word} </span>
@@ -41,14 +41,14 @@ export default function Home() {
                 )}
               </h1>
 
-              <p className="text-base sm:text-lg text-[var(--color-caption)] leading-relaxed max-w-xl">
+              <p className="text-black sm:text-md text-[var(--color-caption)] leading-relaxed max-w-xl">
                 {hero.subtitle}
               </p>
 
               {/* Bullet list */}
               <ul className="space-y-2.5 pt-2">
                 {hero.bullets.map((bullet, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm font-semibold text-[var(--color-caption)]">
+                  <li key={i} className="flex items-center gap-1 text-sm font-semibold text-[var(--color-caption)]">
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)] text-[var(--color-accent)]">
                       <FiCheck className="h-3 w-3" />
                     </span>
@@ -65,7 +65,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 flex justify-center">
+            <div className="lg:col-span-7 p-0! flex justify-center">
               <img className="w-full max-w-4xl" src="https://res.cloudinary.com/dkulkn9be/image/upload/v1782878103/Design_1_Version_2_Trasnsparant_tjepoh.png" alt="" />
             </div>
 
@@ -75,7 +75,7 @@ export default function Home() {
 
       {/* 2. VALUE PROPOSITION CARDS (3-column) */}
       <section className="py-16 md:py-24 bg-white border-t border-[var(--color-lightcyan)]/40">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
           <SectionHeader
             eyebrow="Key Business Values"
             title="Designed for Operations, Proven in the Field"
@@ -100,7 +100,7 @@ export default function Home() {
 
       {/* 4, 5, 6. PRODUCT SHOWCASES (Alternating layout sections) */}
       <section className="py-20 space-y-24 md:space-y-32 bg-white">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
           <SectionHeader
             eyebrow="System Modules"
             title="End-to-End Private Patrol Software"
@@ -153,7 +153,7 @@ export default function Home() {
 
       {/* 7. SECONDARY BENEFITS (3-column) */}
       <section className="py-16 md:py-24 bg-[var(--color-lightcyan)]/40 border-y border-[var(--color-lightcyan)]/80">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
           <SectionHeader
             eyebrow="Scalable Success"
             title="Everything You Need to Succeed"
@@ -175,7 +175,7 @@ export default function Home() {
 
       {/* 8. MOBILE APP SECTION */}
       <section className="py-20 bg-white">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
 
             {/* Left Content */}
@@ -221,7 +221,7 @@ export default function Home() {
 
       {/* 9. CUSTOMER QUOTES */}
       <section className="py-16 md:py-24 bg-slate-50/50 border-t border-slate-100">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
           <SectionHeader
             eyebrow="Success Testimonials"
             title="Trusted by Security Executives"
@@ -235,7 +235,7 @@ export default function Home() {
 
       {/* 10. FAQ SECTION */}
       <section className="py-20 md:py-28 bg-white border-t border-[var(--color-lightcyan)]/40">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
 
             {/* FAQ Left details */}
@@ -298,7 +298,7 @@ export default function Home() {
       </section> */}
 
       {/* 12. CTA BANNER SECTION (Dark navy gradient card with cyan highlights) */}
-      <section className="mx-auto max-w-[75%] px-6 lg:px-8 py-12 md:py-16">
+      <section className="mx-auto max-w-[85%] px-6 lg:px-8 py-12 md:py-16">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] px-8 py-12 text-center shadow-[var(--shadow-card3d)] max-w-5xl mx-auto border border-[var(--color-primaryLight)]">
           {/* Decorative wave backgrounds (CSS) */}
           <div className="absolute inset-0 opacity-10 pointer-events-none">

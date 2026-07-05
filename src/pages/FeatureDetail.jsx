@@ -5,7 +5,7 @@ import Button from "../components/common/Button";
 import SectionHeader from "../components/common/SectionHeader";
 import FeatureCard from "../components/common/FeatureCard";
 import FaqAccordion from "../components/common/FaqAccordion";
-import ArticleCard from "../components/common/ArticleCard";
+// import ArticleCard from "../components/common/ArticleCard";
 import PlaceholderImage from "../components/common/PlaceholderImage";
 import { FiShield } from "react-icons/fi";
 
@@ -58,19 +58,7 @@ export default function FeatureDetail() {
 
             {/* Right Column Visual */}
             <div className="lg:col-span-6 relative flex justify-center">
-              {/* Green/Navy frame element */}
-              <div className="absolute -z-10 -bottom-5 -left-5 w-[85%] h-[90%] rounded-3xl bg-[var(--color-primaryLight)]/10 rotate-2"></div>
-
-              {/* Main mockup placeholder */}
-              <div className="w-full max-w-lg rounded-2xl bg-white shadow-2xl border border-[var(--color-lightcyan)]/40 p-4 relative">
-                <PlaceholderImage type={feature.hero.placeholderType} height="h-80" />
-
-                {/* Floating card element */}
-                <div className="absolute -top-3 -right-3 bg-[var(--color-darkPrimary)] text-white p-3.5 rounded-xl shadow-xl border border-[var(--color-primaryLight)] text-left space-y-1">
-                  <p className="text-[9px] font-bold text-[var(--color-accent)] uppercase">Integration Active</p>
-                  <p className="text-xs font-bold text-white">Client Sync Live</p>
-                </div>
-              </div>
+              <img src="https://res.cloudinary.com/dkulkn9be/image/upload/v1783242572/Guard_Tour_Checkpoint_System_with_logo_pjwofo.png" alt="Hero Image" />
             </div>
 
           </div>
