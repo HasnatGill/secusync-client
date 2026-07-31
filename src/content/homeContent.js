@@ -27,7 +27,7 @@ export const homeContent = {
     {
       icon: "FiDollarSign",
       title: "Increased Revenue",
-      description: "Capture every billable task, custom inspection, or extra patrol hour automatically. Prevent unbilled activities and expedite invoicing."
+      description: "Automatically track every billable task, custom inspection, and extra patrol hour. Stop losing money on unpaid work and get paid much faster."
     }
   ],
   logoCloud: {
