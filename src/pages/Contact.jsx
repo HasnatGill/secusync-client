@@ -15,7 +15,7 @@ export default function Contact() {
     setErrorMsg("");
 
     try {
-      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+      const API_URL = "https://api.secusync.app";
       const res = await fetch(`${API_URL}/contact/submit`, {
         method: "POST",
         headers: {
