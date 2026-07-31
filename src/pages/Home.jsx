@@ -66,7 +66,7 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-7 p-0! flex justify-center">
-              <img className="w-full max-w-4xl" src="https://res.cloudinary.com/dkulkn9be/image/upload/v1782878103/Design_1_Version_2_Trasnsparant_tjepoh.png" alt="" />
+              <img className="w-full max-w-4xl" src="https://res.cloudinary.com/dkulkn9be/image/upload/v1785502877/Design_1_updated_2_uex9yq.png" alt="" />
             </div>
 
           </div>
