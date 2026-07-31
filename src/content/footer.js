@@ -39,8 +39,8 @@ export const footerContent = {
   contact: {
     title: "Get in Touch",
     address: "Global Headquarters, Security Plaza 5, Amsterdam, NL",
-    phone: "+31 (0) 20 800 3920",
-    email: "info@secusync.com"
+    phone: "+923067671800",
+    email: "secusync.app@gmail.com"
   },
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

@@ -6,10 +6,43 @@ export default function Contact() {
 
   const [formData, setFormData] = useState({ name: "", email: "", company: "", guards: "1-10", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMsg("");
+
+    try {
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+      const res = await fetch(`${API_URL}/contact/submit`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || data.isError) {
+        throw new Error(data.message || "Failed to submit request. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Contact Form Submission Error:", err);
+      setErrorMsg(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleReset = () => {
+    setFormData({ name: "", email: "", company: "", guards: "1-10", message: "" });
+    setSubmitted(false);
+    setErrorMsg("");
   };
 
   return (
@@ -77,7 +110,7 @@ export default function Contact() {
                   <h4 className="text-sm font-extrabold text-[var(--color-primary)]">Talk to Sales</h4>
                   <p className="text-xs text-[var(--color-caption)] mt-1">Get custom enterprise volume pricing and custom SLAs.</p>
                   <p className="text-sm font-bold text-[var(--color-accentDark)] mt-2 flex items-center gap-1 group-hover:text-[var(--color-secondary)] transition-colors">
-                    +31 (0) 20 800 3920
+                    +923067671800
                   </p>
                 </div>
               </a>
@@ -93,7 +126,7 @@ export default function Contact() {
                   <h4 className="text-sm font-extrabold text-[var(--color-primary)]">Technical Support</h4>
                   <p className="text-xs text-[var(--color-caption)] mt-1">24/7 help desk for setup, API, and offline app issues.</p>
                   <p className="text-sm font-bold text-[var(--color-accentDark)] mt-2 flex items-center gap-1 group-hover:text-[var(--color-secondary)] transition-colors">
-                    support@secusync.com
+                    secusync.app@gmail.com
                   </p>
                 </div>
               </a>
@@ -120,7 +153,7 @@ export default function Contact() {
                   <span>Average response time today: <strong className="text-[var(--color-primary)]">14 minutes</strong></span>
                 </div>
                 <div className="pt-6">
-                  <Button onClick={() => setSubmitted(false)} variant="secondary">
+                  <Button onClick={handleReset} variant="secondary">
                     Send another request
                   </Button>
                 </div>
@@ -131,6 +164,12 @@ export default function Contact() {
                   <h3 className="text-2xl font-extrabold text-[var(--color-darkPrimary)]">Request Demo & Consultation</h3>
                   <p className="text-sm text-[var(--color-caption)]">Complete the form below to book your free sandbox environment.</p>
                 </div>
+
+                {errorMsg && (
+                  <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold animate-shake">
+                    {errorMsg}
+                  </div>
+                )}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
@@ -219,6 +258,7 @@ export default function Contact() {
                     </div>
                     <textarea
                       rows="4"
+                      required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Briefly describe your requirements or operational issues..."
@@ -230,10 +270,23 @@ export default function Contact() {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="group/btn w-full rounded-xl bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primaryLight)] text-white font-extrabold text-sm py-4 text-center transition-all duration-300 cursor-pointer hover:from-[var(--color-darkPrimary)] hover:to-[var(--color-primary)] hover:shadow-[var(--shadow-glow)] shadow-md flex items-center justify-center gap-2"
+                    disabled={loading}
+                    className="group/btn w-full rounded-xl bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-primaryLight)] text-white font-extrabold text-sm py-4 text-center transition-all duration-300 cursor-pointer hover:from-[var(--color-darkPrimary)] hover:to-[var(--color-primary)] hover:shadow-[var(--shadow-glow)] shadow-md flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <span>Submit Demo Request</span>
-                    <FiSend className="h-4 w-4 text-[var(--color-accent)] transition-all duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-0.5" />
+                    {loading ? (
+                      <span className="flex items-center gap-2">
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Submitting...
+                      </span>
+                    ) : (
+                      <>
+                        <span>Submit Demo Request</span>
+                        <FiSend className="h-4 w-4 text-[var(--color-accent)] transition-all duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-0.5" />
+                      </>
+                    )}
                   </button>
                 </div>
 
