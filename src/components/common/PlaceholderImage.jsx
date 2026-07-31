@@ -276,7 +276,7 @@ export default function PlaceholderImage({ type = "illustration", height = "h-72
   if (type === "penal") {
     return (
       <div>
-        <img src="https://res.cloudinary.com/dkulkn9be/image/upload/v1783242570/Central_Control_Over_All_Field_Operations_boznau.png" alt="dashboard" />
+        <img src="https://res.cloudinary.com/dkulkn9be/image/upload/v1785498889/Central_Control_Over_All_Field_Operations_2.1_awcqfq.png" alt="dashboard" />
       </div>
     );
   }
