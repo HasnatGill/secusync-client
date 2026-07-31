@@ -45,7 +45,7 @@ export const homeContent = {
       id: "guard-tour",
       eyebrow: "Mobile Patrol",
       title: "Active Guard Tour & Checkpoint System",
-      description: "Equip security officers with a robust mobile app to scan NFC tags or QR codes, perform structured facility inspections, and log issues on the go. Supervisors monitor checkpoint status, GPS locations, and active alerts from a web dashboard.",
+      description: "Equip security officers with a robust mobile app to scan QR codes, perform structured facility inspections, and log issues on the go. Supervisors monitor checkpoint status, GPS locations, and active alerts from a web dashboard.",
       linkText: "Discover Guard Tour System",
       linkHref: "/features/guard-tour-system",
       placeholderType: "checkPoint"
