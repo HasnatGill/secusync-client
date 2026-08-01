@@ -30,7 +30,7 @@ export const footerContent = {
     {
       title: "Resources",
       links: [
-        { label: "Developer API", href: "/features/secusync-hub" },
+        // { label: "Developer API", href: "/features/secusync-hub" },
         { label: "Security Hub Network", href: "/features/secusync-hub" },
         { label: "Support Center", href: "/contact" }
       ]
