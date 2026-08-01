@@ -54,7 +54,7 @@ export default function Contact() {
       {/* Grid background layer */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_-10%,rgba(31,200,227,0.06),rgba(255,255,255,0))] pointer-events-none" />
 
-      <div className="relative mx-auto max-w-[75%] px-6 lg:px-8">
+      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Layout Grid */}
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-start">
@@ -110,7 +110,7 @@ export default function Contact() {
                   <h4 className="text-sm font-extrabold text-[var(--color-primary)]">Talk to Sales</h4>
                   <p className="text-xs text-[var(--color-caption)] mt-1">Get custom enterprise volume pricing and custom SLAs.</p>
                   <p className="text-sm font-bold text-[var(--color-accentDark)] mt-2 flex items-center gap-1 group-hover:text-[var(--color-secondary)] transition-colors">
-                    +923067671800
+                    +92 306 7671800
                   </p>
                 </div>
               </a>
@@ -134,7 +134,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column Form */}
-          <div className="lg:col-span-7 bg-white/90 backdrop-blur-md p-8 sm:p-10 rounded-3xl border border-[var(--color-lightcyan)]/60 shadow-[var(--shadow-card3d)] hover:shadow-2xl transition-all duration-500 relative">
+          <div className="lg:col-span-7 bg-white/90 backdrop-blur-md p-5 sm:p-10 rounded-3xl border border-[var(--color-lightcyan)]/60 shadow-[var(--shadow-card3d)] hover:shadow-2xl transition-all duration-500 relative">
 
             {submitted ? (
               <div className="text-center py-16 px-4 space-y-6 animate-fade-in">

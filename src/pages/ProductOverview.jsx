@@ -19,7 +19,7 @@ export default function ProductOverview() {
 
       {/* Hero */}
       <section className="relative pt-12 pb-20 md:pt-16 md:pb-24 bg-[var(--color-lightcyan)]/30 border-b border-[var(--color-lightcyan)]/80">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8 text-center space-y-6 max-w-4xl">
+        <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="inline-block rounded-full bg-[var(--color-lightcyan)] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] border border-[var(--color-accent)]/20">
             {hero.badge}
           </span>
@@ -39,7 +39,7 @@ export default function ProductOverview() {
 
       {/* Stacked Alternating Modules */}
       <section className="py-20 md:py-28 space-y-24 md:space-y-32">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           {modules.map((mod, index) => {
             const isEven = index % 2 === 0;
             return (
@@ -95,7 +95,7 @@ export default function ProductOverview() {
 
       {/* Testimonials */}
       <section className="py-16 bg-slate-50/50 border-y border-slate-100">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Proven Success"
             title="What Our Clients Say About Our Modules"
@@ -109,7 +109,7 @@ export default function ProductOverview() {
 
       {/* Recommended Articles */}
       <section className="py-20 bg-white">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Industry Resources"
             title="Read More from Our Experts"
@@ -135,8 +135,8 @@ export default function ProductOverview() {
       </section>
 
       {/* CTA Banner */}
-      <section className="mx-auto max-w-[75%] px-6 lg:px-8 py-12 md:py-16">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] px-8 py-12 text-center shadow-[var(--shadow-card3d)] max-w-5xl mx-auto border border-[var(--color-primaryLight)]">
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] px-5 sm:px-8 py-8 sm:py-12 text-center shadow-[var(--shadow-card3d)] max-w-5xl mx-auto border border-[var(--color-primaryLight)]">
           <div className="relative z-10 max-w-2xl mx-auto space-y-6">
             <h2 className="text-3xl font-extrabold text-white leading-tight">
               Ready to Upgrade to the Full SecuSync Suite?

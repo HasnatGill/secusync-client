@@ -39,7 +39,7 @@ export const footerContent = {
   contact: {
     title: "Get in Touch",
     address: "Global Headquarters, Security Plaza 5, Amsterdam, NL",
-    phone: "+923067671800",
+    phone: "+92 306 7671800",
     email: "secusync.app@gmail.com"
   },
   legal: [

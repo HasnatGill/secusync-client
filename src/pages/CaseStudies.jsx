@@ -15,7 +15,7 @@ export default function CaseStudies() {
 
       {/* Hero */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 bg-[var(--color-lightcyan)]/30 border-b border-[var(--color-lightcyan)]/80">
-        <div className="mx-auto max-w-[85%] px-6 lg:px-8 text-center space-y-6 max-w-4xl">
+        <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="inline-block rounded-full bg-[var(--color-lightcyan)] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] border border-[var(--color-accent)]/20">
             Client Success
           </span>
@@ -30,7 +30,7 @@ export default function CaseStudies() {
 
       {/* Categories & Listing */}
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
           {/* Filter Pills */}
           <div className="flex flex-wrap justify-center items-center gap-2.5 mb-12">
@@ -75,8 +75,8 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA Banner */}
-      <section className="mx-auto max-w-[85%] px-6 lg:px-8 py-12 md:py-16">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] px-8 py-12 text-center shadow-[var(--shadow-card3d)] max-w-5xl mx-auto border border-[var(--color-primaryLight)]">
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] px-5 sm:px-8 py-8 sm:py-12 text-center shadow-[var(--shadow-card3d)] max-w-5xl mx-auto border border-[var(--color-primaryLight)]">
           <div className="relative z-10 max-w-2xl mx-auto space-y-6">
             <h2 className="text-3xl font-extrabold text-white leading-tight">
               Want to Achieve Similar Results with SecuSync?

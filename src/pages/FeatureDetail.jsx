@@ -31,7 +31,7 @@ export default function FeatureDetail() {
 
       {/* 1. HERO SECTION */}
       <section className="relative pt-10 pb-20 md:pt-16 md:pb-28 bg-gradient-to-b from-[var(--color-lightcyan)]/30 via-white to-white border-b border-[var(--color-lightcyan)]/30">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
 
             {/* Left Column Copy */}
@@ -67,7 +67,7 @@ export default function FeatureDetail() {
 
       {/* 2. MINI FEATURE CARDS (3 Cards) */}
       <section className="py-16 md:py-20 bg-[var(--color-lightcyan)]/10">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {feature.miniCards.map((card, i) => (
               <FeatureCard
@@ -83,7 +83,7 @@ export default function FeatureDetail() {
 
       {/* 3. DEEP-DIVE SECTIONS (4 Alternating Blocks) */}
       <section className="py-20 md:py-28 space-y-24 md:space-y-32">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
           <SectionHeader
             eyebrow="Detailed Breakdown"
@@ -130,8 +130,8 @@ export default function FeatureDetail() {
       </section>
 
       {/* 4. MID CTA BANNER (Dark navy gradient block) */}
-      <section className="mx-auto max-w-[75%] px-6 lg:px-8 py-8">
-        <div className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] text-white rounded-3xl p-8 md:p-12 shadow-[var(--shadow-card3d)] text-center relative overflow-hidden max-w-4xl mx-auto border border-[var(--color-primaryLight)]">
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] text-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-[var(--shadow-card3d)] text-center relative overflow-hidden max-w-4xl mx-auto border border-[var(--color-primaryLight)]">
           <div className="relative z-10 max-w-xl mx-auto space-y-4">
             <h3 className="text-2xl text-white! font-extrabold">Interested in checking this module out in real time?</h3>
             <p className="text-xs sm:text-sm text-slate-300">Schedule a 15-minute operational call with our private security system architects.</p>
@@ -147,7 +147,7 @@ export default function FeatureDetail() {
       {/* 5. CUSTOMER QUOTES SECTION */}
       {quote && (
         <section className="py-16 md:py-20 bg-slate-50 border-y border-slate-100">
-          <div className="mx-auto max-w-[75%] px-6 lg:px-8 text-center space-y-6 max-w-3xl">
+          <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <span className="block text-5xl text-[var(--color-accent)]/90 font-serif leading-none">“</span>
             <p className="text-lg sm:text-xl font-medium text-[var(--color-caption)] italic leading-relaxed">
               {quote.text}
@@ -164,7 +164,7 @@ export default function FeatureDetail() {
 
       {/* 6. ALL FEATURES AT A GLANCE GRID */}
       <section className="py-20 bg-white">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Feature Matrix"
             title="Complete Capability Overview"
@@ -187,7 +187,7 @@ export default function FeatureDetail() {
 
       {/* 7. FAQ SECTION */}
       <section className="py-16 md:py-20 bg-slate-50/50 border-y border-slate-100">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5 text-left space-y-4">
               <span className="text-xs font-bold uppercase tracking-widest text-[var(--color-secondary)]">Module Q&A</span>
@@ -207,7 +207,7 @@ export default function FeatureDetail() {
 
       {/* 8. RECOMMENDED ARTICLES SECTION */}
       {/* <section className="py-20 bg-white">
-        <div className="mx-auto max-w-[75%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Resources"
             title="Recommended Reads for Security Managers"
@@ -233,8 +233,8 @@ export default function FeatureDetail() {
       </section> */}
 
       {/* 9. FINAL CTA BANNER */}
-      <section className="mx-auto max-w-[75%] px-6 lg:px-8 py-12">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] px-8 py-12 text-center shadow-[var(--shadow-card3d)] max-w-5xl mx-auto border border-[var(--color-primaryLight)]">
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-darkPrimary)] px-5 sm:px-8 py-8 sm:py-12 text-center shadow-[var(--shadow-card3d)] max-w-5xl mx-auto border border-[var(--color-primaryLight)]">
           <div className="relative z-10 max-w-2xl mx-auto space-y-6">
             <h2 className="text-2xl font-extrabold text-white! leading-tight">
               Request a Demo for the {feature.title} Today
@@ -242,7 +242,7 @@ export default function FeatureDetail() {
             <p className="text-sm sm:text-base text-slate-300">
               Set up your guards, map your first route checkpoints, and deliver clean client reports in less than 5 days.
             </p>
-            <div className="flex justify-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-2">
               <Button to="/contact" variant="accent">
                 Request {feature.title} Demo
               </Button>

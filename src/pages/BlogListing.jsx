@@ -25,7 +25,7 @@ export default function BlogListing() {
       
       {/* Hero */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 bg-[var(--color-lightcyan)]/30 border-b border-[var(--color-lightcyan)]/80">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center space-y-6 max-w-4xl">
+        <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="inline-block rounded-full bg-[var(--color-lightcyan)] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] border border-[var(--color-accent)]/20">
             SecuSync Blog
           </span>
@@ -40,7 +40,7 @@ export default function BlogListing() {
 
       {/* Listing and Search Controls */}
       <section className="py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           
           {/* Controls row */}
           <div className="flex flex-col md:flex-row gap-6 justify-between items-center mb-12">

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import darkLogo from "../../assets/darkLogo.png";
@@ -94,7 +95,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[var(--color-lightcyan)] bg-white shadow-xs backdrop-blur-xs">
-      <div className="mx-auto flex h-20 max-w-[85%] items-center justify-between px-6 lg:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 
         {/* Brand Logo */}
         <div className="flex items-center gap-2">
@@ -185,7 +186,7 @@ export default function Navbar() {
         <div className="flex md:hidden items-center">
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="p-2 text-[var(--color-primary)] hover:text-[var(--color-accent)] focus:outline-none"
+            className="p-2 text-[var(--color-primary)] hover:text-[var(--color-accent)] focus:outline-none cursor-pointer"
             aria-label="Open Menu"
           >
             <FiMenu className="h-6 w-6" />
@@ -193,76 +194,91 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 z-50 bg-black"
-            />
+      {/* Mobile Drawer Menu rendered via React Portal to escape header backdrop-filter containing block */}
+      {typeof document !== "undefined" && createPortal(
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <>
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.5 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setMobileMenuOpen(false)}
+                className="fixed inset-0 z-[100] bg-slate-900/60 backdrop-blur-xs"
+              />
 
-            {/* Menu Body */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "tween", duration: 0.3 }}
-              className="fixed inset-y-0 right-0 z-50 w-full max-w-xs overflow-y-auto bg-white p-6 shadow-xl"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-bold text-[var(--color-primary)]">Navigation</span>
-                <button
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-[var(--color-primary)] hover:text-[var(--color-accent)] focus:outline-none"
-                  aria-label="Close Menu"
-                >
-                  <FiX className="h-6 w-6" />
-                </button>
-              </div>
-
-              <div className="mt-8 space-y-6">
+              {/* Drawer Menu Body */}
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                className="fixed inset-y-0 right-0 z-[101] w-full max-w-xs overflow-y-auto bg-white p-6 shadow-2xl flex flex-col justify-between"
+              >
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-caption)]">Features</p>
-                  <div className="mt-3 space-y-3">
-                    {featureItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block text-sm font-bold text-[var(--color-primary)] hover:text-[var(--color-accent)]"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+                    <span className="flex items-center gap-2">
+                      <img src={darkLogo} alt="SecuSync" className="h-8 w-auto" />
+                    </span>
+                    <button
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="rounded-full p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-800 transition-colors focus:outline-none cursor-pointer"
+                      aria-label="Close Menu"
+                    >
+                      <FiX className="h-6 w-6" />
+                    </button>
+                  </div>
+
+                  <div className="mt-6 space-y-6">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-secondary)]">
+                        Platform Features
+                      </p>
+                      <div className="mt-3 space-y-1">
+                        {featureItems.map((item) => {
+                          const Icon = item.icon;
+                          return (
+                            <Link
+                              key={item.name}
+                              to={item.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-[var(--color-primary)] hover:bg-[var(--color-lightcyan)] hover:text-[var(--color-accentDark)] transition-colors"
+                            >
+                              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--color-lightcyan)] text-[var(--color-primary)]">
+                                <Icon className="h-4 w-4" />
+                              </span>
+                              <span>{item.name}</span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <div className="border-t border-[var(--color-lightcyan)] pt-6 space-y-4">
+                <div className="border-t border-slate-100 pt-6 space-y-3 mt-6">
                   <Link
                     to="/contact"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-base font-bold text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors"
+                    className="block w-full rounded-full border-2 border-[var(--color-primary)] px-4 py-2.5 text-center text-sm font-bold text-[var(--color-primary)] hover:bg-[var(--color-lightcyan)] transition-colors"
                   >
                     Contact Us
                   </Link>
                   <Link
                     to="/contact"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full rounded-full bg-[var(--color-primary)] px-4 py-2.5 text-center text-sm font-bold text-white shadow-md hover:bg-[var(--color-darkPrimary)]"
+                    className="block w-full rounded-full bg-[var(--color-primary)] px-4 py-2.5 text-center text-sm font-bold text-white shadow-md hover:bg-[var(--color-darkPrimary)] transition-colors"
                   >
                     Request Demo
                   </Link>
                 </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </header>
   );
 }

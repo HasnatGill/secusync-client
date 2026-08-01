@@ -53,7 +53,7 @@ export default function TermsOfService() {
 
       {/* 1. HERO HEADER */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 bg-gradient-to-b from-[var(--color-lightcyan)]/30 via-white to-white border-b border-[var(--color-lightcyan)]/80">
-        <div className="mx-auto max-w-[85%] px-6 lg:px-8 text-center space-y-4 max-w-3xl">
+        <div className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--color-lightcyan)] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] border border-[var(--color-accent)]/20">
             <FiFileText className="h-3.5 w-3.5 text-[var(--color-accent)]" />
             Terms of Use
@@ -69,7 +69,7 @@ export default function TermsOfService() {
 
       {/* 2. CONTENT SECTION WITH SIDEBAR */}
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-[85%] px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
             {/* Left Sidebar Outline Menu */}
